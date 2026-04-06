@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-syne: 'Syne', sans-serif;
+  --font-fira: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #08080c;
+  color: #e8e8f0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08080c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1c28;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a52;
+}
+
+/* Range inputs */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  background: #1c1c28;
+  height: 4px;
+  border-radius: 2px;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  background-color: #4f8eff;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(79, 142, 255, 0.25);
+}
+
+/* Color input */
+input[type='color'] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+}
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(79, 142, 255, 0.3);
+  color: #e8e8f0;
+}
+
+@layer components {
+  .glass {
+    background: rgba(15, 15, 20, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #1c1c28;
+  }
+
+  .tool-input {
+    @apply w-full bg-surface border border-border rounded-lg px-3 py-2.5 text-text text-sm font-fira outline-none transition-all duration-150 placeholder:text-subtle;
+  }
+  .tool-input:focus {
+    @apply border-accent-blue/60 ring-2 ring-accent-blue/10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-accent-blue text-white text-sm font-medium rounded-lg hover:bg-accent-blue/90 active:scale-95 transition-all duration-150 select-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-3 py-2 bg-transparent border border-border text-subtle text-sm font-medium rounded-lg hover:border-muted hover:text-text active:scale-95 transition-all duration-150 select-none;
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-md bg-transparent border border-border text-subtle hover:border-muted hover:text-text active:scale-95 transition-all duration-150 select-none;
+  }
+}
