@@ -1,57 +1,38 @@
-# DevKit
+DevKit — Toolkit de Ferramentas para Desenvolvedores
 
-> A polished, client-side developer toolkit — 7 tools, zero backend, zero auth.
+Projeto desenvolvido por: Lemos Dev
 
-![Next.js](https://img.shields.io/badge/Next.js_14-black?style=flat-square&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=flat-square&logo=framer)
+Descrição:
+DevKit é um toolkit completo de utilidades para desenvolvedores, construído em Next.js 14. O site oferece múltiplas ferramentas independentes, todas client-side, com navegação lateral, design consistente e interações suaves. Inspirado em produtos SaaS, cada ferramenta mantém a mesma identidade visual, proporcionando uma experiência coesa e profissional.
 
-## Tools
-
-| Route | Tool | Description |
-|-------|------|-------------|
-| `/` | **README Generator** | Form-driven README with live markdown preview, badges, copy & download |
-| `/colors` | **Color Palette** | Generate harmonic 5-color palettes, lock/unlock, export as CSS vars / Tailwind / JSON |
-| `/gradient` | **Gradient Generator** | Linear & radial gradients with direction picker, live preview, localStorage favorites |
-| `/shadows` | **Box Shadow Builder** | Multi-layer shadows with per-layer sliders, inset support, live card preview |
-| `/regex` | **Regex Tester** | Real-time match highlighting, flag toggles, capture groups, 8 common presets |
-| `/base64` | **Base64 Encoder/Decoder** | Encode/decode in real time, URL-safe variant, flip button |
-| `/json` | **JSON Formatter** | Format, validate (with error line), minify, indent selector, format/minify in place |
-
-## Stack
-
-- **Next.js 14** — App Router, `output: 'export'` (fully static)
-- **TypeScript** — strict mode
-- **Tailwind CSS** — custom dark theme (`#08080c` bg)
-- **Framer Motion** — route transitions, sidebar animation
-- **Lucide React** — icons
-
-## Getting Started
-
-```bash
+Ferramentas Incluídas
+README Generator – Crie README.md com preview em tempo real, badges automáticos e exportação.
+Paleta de Cores – Gere paletas harmônicas, visualize valores HEX, RGB e HSL e exporte em CSS/Tailwind/JSON.
+Gradient Builder – Crie gradientes CSS com preview e favoritos salvos.
+Box Shadow Builder – Construa múltiplas camadas de sombras CSS com sliders interativos.
+Regex Tester – Teste expressões regulares com highlight, grupos capturados e exemplos prontos.
+Base64 Encoder/Decoder – Encode e decode texto ou URLs em tempo real.
+JSON Formatter & Validator – Formate, valide e minifique JSON, com feedback de erros linha a linha.
+Tecnologias Utilizadas
+Next.js 14 (App Router, export estático)
+TypeScript
+Tailwind CSS
+Framer Motion (animações e transições)
+Lucide React (ícones)
+Design & UX
+Tema dark (#08080c) com cores de destaque individuais para cada ferramenta.
+Layout responsivo: sidebar no desktop, menu hambúrguer no mobile.
+Preview e feedback em tempo real para todas as ferramentas.
+Componentes reutilizáveis e design escalável, simulando um produto SaaS real.
+Como Rodar Localmente
+Clone o repositório:
+git clone <URL_DO_REPOSITORIO>
+Instale as dependências:
 npm install
+Rode o projeto em desenvolvimento:
 npm run dev
-```
+Abra no navegador:
+http://localhost:3000
+Objetivo do Projeto
 
-Open [http://localhost:3000](http://localhost:3000).
-
-## Build (Static Export)
-
-```bash
-npm run build
-```
-
-Output is in the `out/` directory — drop it anywhere (Netlify, Vercel, GitHub Pages, etc).
-
-## Design
-
-- Dark theme: `#08080c` background, not grey
-- Accent: `#4f8eff` (blue) with per-tool color variants
-- Typography: **Syne** for UI + **Fira Code** for code/inputs
-- Each tool has a unique accent color (purple, pink, cyan, orange, green, yellow)
-- Mobile responsive — sidebar becomes a hamburger menu
-
-## Author
-
-Made with ❤️ by a senior frontend engineer.
+Este projeto demonstra habilidade em frontend moderno, UX/UI consistente, componentização avançada e capacidade de criar produtos digitais completos do zero, combinando funcionalidade prática com design profissional.
